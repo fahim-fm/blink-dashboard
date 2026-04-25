@@ -1,0 +1,19 @@
+# Dependencies and build output
+node_modules
+.next
+
+# VCS and IDE
+.git
+.gitignore
+.vscode
+
+# Local files
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Docker itself
+Dockerfile
+.dockerignore

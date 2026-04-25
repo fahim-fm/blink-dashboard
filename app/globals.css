@@ -1,0 +1,186 @@
+
+@import "tailwindcss";
+
+
+/* =========================
+   Freesentation Font
+   ========================= */
+   @font-face {
+    font-family: "Freesentation";
+    src: url("/fonts/Freesentation-4Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Freesentation";
+    src: url("/fonts/Freesentation-5Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Freesentation";
+    src: url("/fonts/Freesentation-6SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "Freesentation";
+    src: url("/fonts/Freesentation-8ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+
+
+  
+
+/* =========================
+   Lufga Font (TTF)
+   ========================= */
+@font-face {
+  font-family: "Lufga";
+  src: url("/fonts/Lufga-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   DARK MODE (DEFAULT)
+   ========================= */
+:root {
+  /* Backgrounds */
+  --Primary_Black: #000000; /* bg */
+  --Gray_22: #222222;       /* form-bg */
+  --Gray_3c: #3C3D38;
+
+  /* Text*/
+  --Gray_f4: #F4F4F4;
+  --Gray_b8: #B8B8B8;
+  --Gray_8a: #8A8A8A; 
+  
+  
+  /* Common / Brand */
+  --Primary_Green: #B4E04C;
+  --Green_Dark: #98C04E;
+  --Primary_Red: #ED3B50;
+  --Primary_Orange: #F6C61E;
+  --Primary_Blue: #4079FF;
+  --Primary_Text: #000000;
+  --Primary_White: #FFFFFF;
+  --Gray_fa: #FAFAFA0F;
+
+ 
+}
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+.light {
+  /* Backgrounds */
+  --Primary_Black: #FAFAFA; /* bg */
+  --Gray_22: #FFFFFF;       /* form-bg */
+  --Gray_3c: #E5E5E5;
+
+  /* Text */
+  --Gray_f4: #303030;
+  --Gray_b8: #303030;
+  --Gray_8a: #606060;
+
+  /* Common / Brand remain same */
+  --Primary_Green: #B4E04C;
+  --Green_Dark: #98C04E;
+  --Primary_Red: #ED3B50;
+  --Primary_Orange: #F6C61E;
+  --Primary_Blue: #4079FF;
+  --Primary_Text: #000000;
+  --Primary_White: #FFFFFF;
+  --Gray_fa: #FAFAFA;
+ 
+ 
+}
+
+/* =========================
+   Tailwind v4 Theme Tokens
+   ========================= */
+@theme inline {
+  /* Backgrounds */
+  --color-background: var(--Primary_Black);
+  --color-form: var(--Gray_22);
+  --color-border: var(--Gray_3c);
+  --color-gray: var(--Gray_fa);
+  
+
+  /* Text */
+  --color-text: var(--Gray_f4);
+  --color-text-primary: var(--Primary_Text);
+  --color-text-secondary: var(--Gray_b8);
+  --color-text-muted: var(--Gray_8a);
+
+  /* Brand */
+  --color-green: var(--Primary_Green);
+  --color-green-dark: var(--Green_Dark);
+  --color-red: var(--Primary_Red);
+  --color-orange: var(--Primary_Orange);
+  --color-blue: var(--Primary_Blue);
+
+  /* Fonts */
+  --font-sans: "Freesentation", system-ui, Arial, Helvetica, sans-serif;
+  --font-lufga: "Lufga",sans-serif;
+}
+
+/* =========================
+   Base Styles
+   ========================= */
+html {
+  background: var(--Primary_Black);
+}
+
+body {
+  background: var(--Primary_Black);
+  color: var(--Gray_f4);
+  font-family: var(--font-sans);
+  font-weight: 600; /* default medium */
+  min-height: 100vh;
+}
+/* .container{
+  @apply px-[16px] lg:px-0 mx-auto lg:mx-0;
+} */
+/* Hide scrollbar but keep scrolling */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+@layer components {
+.th-base {
+  @apply  px-4 py-4 text-left
+         text-[14px] sm:text-[16px]
+         whitespace-nowrap font-semibold text-text;
+}
+
+.td-base {
+  @apply  px-4 py-4 text-left
+         text-[14px] sm:text-[16px]
+         font-semibold text-text-secondary whitespace-nowrap;
+}
+
+  .container {
+    @apply w-full max-w-[1440px] mx-auto ;
+  }
+}
+
+
+.font-lufga {
+  font-family: var(--font-lufga);
+}

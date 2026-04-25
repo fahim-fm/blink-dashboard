@@ -1,0 +1,6 @@
+export {inquiriesData} from './inquiry/inquiryData'
+export {usersData} from './user/usersData'
+export {reportsData} from './report/reportsData'
+export {paymentTableData} from './payment/paymentTableData'
+export {sidebarLinks} from './sidebar/sidebarLinks'
+export {paymentStatCardsData} from './payment/paymentStatCardsData'

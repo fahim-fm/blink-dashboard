@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Public pages
+Allow: /
+Allow: /about
+Allow: /contact
+
+# Auth pages
+Allow: /login
+Allow: /register
+
+# Dashboard pages (Private)
+Disallow: /dashboard/
+Disallow: /users/
+
+# API routes
+Disallow: /api/
+
+# Static files
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
